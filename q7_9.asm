@@ -22,7 +22,6 @@ CODE SEGMENT
 
           
     s:    push cx
-    
           mov  si,3
           mov  cx,4
           
