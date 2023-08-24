@@ -8,6 +8,6 @@ CODE SEGMENT
           jmp dword ptr ds:[0]
 
           mov ax,4c00h
-          int 21h
+        int 21h
 CODE ENDS
 END start

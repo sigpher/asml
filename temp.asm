@@ -1,18 +1,18 @@
-ASSUME CS:CODE, DS:DATA, SS:STACK
+ASSUME CS:CODE, DS:DATA
 
 STACK SEGMENT
-          dw 8 dup(0)
+          db 'conversation'
 STACK ENDS
 
 DATA SEGMENT
-         db '1. clang           '
-         db '2. goang           '
-         db '3. rust            '
-         db '4. javascript      '
-         db '5. python          '
+         db 16 dup(0)
 DATA ENDS
 
 CODE SEGMENT
-    start:
+    start:mov ax,DATA
+          mov ds,ax
+
+          mov ax, 4c00h
+          int 21h
 CODE ENDS
 END start
